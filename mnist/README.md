@@ -3,7 +3,7 @@
 ## Create code repo
 - Name: dkube-examples
 - Project source: Git
-- Git URL: https://github.com/oneconvergence/dkube-examples.git
+- Git URL: https://github.com/pallavi-pannu-oc/hyperparameter-tuning-demo.git
 - Branch: tensorflow
 
 ## Create dataset repo
@@ -16,9 +16,9 @@
 - Name: mnist
 - Keep default for others
 
-## Katib based Hyperparameter Tuning
+## Katib based Hyperparameter Tuning (UI)
 1. Create a Run same as explained above, except that now a tuning file also needs to be uploaded in the configuration tab.
-  - For hyperparameter tuning upload the https://github.com/oneconvergence/dkube-examples/blob/tensorflow/mnist/tuning.yaml under upload tuning definition. 
+  - For hyperparameter tuning upload the https://github.com/pallavi-pannu-oc/hyperparameter-tuning-demo/blob/main/mnist/tuning.json under upload tuning definition. 
   - Submit the run. 
 
 ## Tuning.yaml file Details:
@@ -37,7 +37,7 @@
    - cmaes
    - enas
 
-## Launch Notebook
+## Launch Notebook (Pipeline Flow)
 - Create Jupyterlab IDE with tensorflow framework.
 - Select the Code dkube-examples.
 - Run the mnist-pipeline-tuning.ipynb notebook, it will automatically create the hyperparameter training run.

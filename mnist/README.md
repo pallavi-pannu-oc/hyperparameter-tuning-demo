@@ -17,7 +17,7 @@
 - Keep default for others
 
 ## Katib based Hyperparameter Tuning (UI)
-1. **Create a Run **
+1. **Create a Run**
  - Runs->+Training Run.
  - Code: dkube-examples
  - Framework: Tensorflow

@@ -4,7 +4,7 @@
 - Name: dkube-examples
 - Project source: Git
 - Git URL: https://github.com/pallavi-pannu-oc/hyperparameter-tuning-demo.git
-- Branch: tensorflow
+- Branch: main
 
 ## Create dataset repo
 - Name: mnist
@@ -17,9 +17,16 @@
 - Keep default for others
 
 ## Katib based Hyperparameter Tuning (UI)
-1. Create a Run same as explained above, except that now a tuning file also needs to be uploaded in the configuration tab.
-  - For hyperparameter tuning upload the https://github.com/pallavi-pannu-oc/hyperparameter-tuning-demo/blob/main/mnist/tuning.json under upload tuning definition. 
-  - Submit the run. 
+1. **Create a Run **
+ - Runs->+Training Run.
+ - Code: dkube-examples
+ - Framework: Tensorflow
+ - Version: 2.0.0
+ - Start-up script: python mnist/train.py
+ - Repos->Inputs->Datasets: select mnist and enter mountpath as /mnist
+ - Repos->Outputs->Model: select mnist and enter mountpath as /model
+ - For **hyperparameter tuning** upload the https://github.com/pallavi-pannu-oc/hyperparameter-tuning-demo/blob/main/mnist/tuning.json under upload tuning definition. 
+ - Submit the run. 
 
 ## Tuning.yaml file Details:
 1. **objective**: The metric that you want to optimize. 
